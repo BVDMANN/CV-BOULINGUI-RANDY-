@@ -11,41 +11,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --bg: #edf1f3;
-        --bg-deep: #e2e9ec;
-        --surface: #ffffff;
-        --surface-2: #f4f7f8;
-        --ink: #15242f;
-        --ink-soft: #43565f;
-        --ink-faint: #637680;
-        --line: #d3dde1;
-        --line-strong: #b9c9cf;
-        --accent: #0b6e63;
-        --accent-strong: #084f47;
-        --accent-soft: #dcefec;
-        --tag-bg: #e7edef;
-        --ok-bg: #dcf0e6;
-        --ok-ink: #0c5b3f;
-        --shadow: 0 1px 2px rgba(21, 36, 47, .06), 0 10px 30px -18px rgba(21, 36, 47, .25);
+        /* Palette propre à ce site CV : neutre beige / lin,
+           marié à deux couleurs nature — vert sauge (principal)
+           et terracotta argile (secondaire). */
+        --bg: #f5f0e4;
+        --bg-deep: #ede5d2;
+        --surface: #fffcf5;
+        --surface-2: #f7f1e2;
+        --ink: #2e2a20;
+        --ink-soft: #5a5344;
+        --ink-faint: #857a66;
+        --line: #e0d5bd;
+        --line-strong: #c8b998;
+        --accent: #5b7350;
+        --accent-strong: #3e5234;
+        --accent-soft: #e4ead9;
+        --accent2: #b26b45;
+        --accent2-strong: #8a4e2c;
+        --accent2-soft: #f4e3d2;
+        --tag-bg: #efe8d4;
+        --ok-bg: #e4ead9;
+        --ok-ink: #3e5234;
+        --shadow: 0 1px 2px rgba(46, 42, 32, .06), 0 10px 30px -18px rgba(46, 42, 32, .28);
         --radius: 14px;
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --bg: #0a1319;
-          --bg-deep: #0a1319;
-          --surface: #122029;
-          --surface-2: #16262f;
-          --ink: #e9f1f3;
-          --ink-soft: #b7c8ce;
-          --ink-faint: #8ba0a8;
-          --line: #24363f;
-          --line-strong: #334a55;
-          --accent: #3ec9b6;
-          --accent-strong: #7fe0d2;
-          --accent-soft: #12352f;
-          --tag-bg: #1b2f38;
-          --ok-bg: #123528;
-          --ok-ink: #7fd8ae;
+          --bg: #171410;
+          --bg-deep: #171410;
+          --surface: #23201a;
+          --surface-2: #2a2620;
+          --ink: #f0ead8;
+          --ink-soft: #cec4ad;
+          --ink-faint: #9d927c;
+          --line: #3b352a;
+          --line-strong: #524a3a;
+          --accent: #a6bf92;
+          --accent-strong: #c4d8b1;
+          --accent-soft: #2f3a28;
+          --accent2: #da9a73;
+          --accent2-strong: #ecb18d;
+          --accent2-soft: #3e2b20;
+          --tag-bg: #2e2a21;
+          --ok-bg: #2f3a28;
+          --ok-ink: #bcd3a6;
           --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px -18px rgba(0,0,0,.6);
         }
       }
@@ -79,7 +88,7 @@
         font-family: "Archivo", sans-serif; font-weight: 800; font-size: 15px;
         letter-spacing: .01em; margin-right: auto; white-space: nowrap;
       }
-      .nav-name span { color: var(--accent); }
+      .nav-name span { color: var(--accent2); }
       .nav a.link {
         font-size: 13.5px; font-weight: 600; text-decoration: none; color: var(--ink-soft);
         padding: 6px 11px; border-radius: 999px;
@@ -101,11 +110,11 @@
       .photo {
         width: 148px; height: 148px; border-radius: 50%; object-fit: cover; object-position: 50% 22%;
         display: block; margin: 2px auto 16px;
-        border: 3px solid var(--accent-soft); box-shadow: 0 0 0 1px var(--line-strong);
+        border: 3px solid var(--accent2-soft); box-shadow: 0 0 0 1px var(--line-strong), 0 0 0 5px var(--accent-soft);
       }
       .side h1 { font-size: 24px; font-weight: 800; text-align: center; line-height: 1.15; }
       .role {
-        text-align: center; color: var(--accent-strong); font-weight: 700;
+        text-align: center; color: var(--accent2-strong); font-weight: 700;
         font-size: 14.5px; margin-top: 6px; line-height: 1.35;
       }
       .status {
@@ -154,15 +163,15 @@
         background: var(--accent); color: #fff; text-decoration: none; font-weight: 700;
         padding: 11px 14px; border-radius: 10px; font-size: 15px;
       }
-      @media (prefers-color-scheme: dark) { .side .cta { color: #06231f; } }
+      @media (prefers-color-scheme: dark) { .side .cta { color: #1e2a18; } }
       .side .cta:hover { background: var(--accent-strong); }
-      @media (prefers-color-scheme: dark) { .side .cta:hover { color: #06231f; } }
+      @media (prefers-color-scheme: dark) { .side .cta:hover { color: #1e2a18; } }
       .side .cta2 {
         display: block; text-align: center; margin-top: 9px;
         border: 1px solid var(--line-strong); color: var(--ink); text-decoration: none; font-weight: 600;
         padding: 10px 14px; border-radius: 10px; font-size: 14.5px; background: var(--surface-2);
       }
-      .side .cta2:hover { border-color: var(--accent); color: var(--accent-strong); }
+      .side .cta2:hover { border-color: var(--accent2); color: var(--accent2-strong); }
 
       /* ---------- Main column ---------- */
       .main { display: grid; gap: 22px; min-width: 0; }
@@ -177,6 +186,9 @@
         color: var(--accent-strong); background: var(--accent-soft);
         border-radius: 6px; padding: 2px 7px;
       }
+      .main .section:nth-child(even) > h2 .n {
+        color: var(--accent2-strong); background: var(--accent2-soft);
+      }
       .lead { font-size: 16.5px; color: var(--ink-soft); margin: 0; }
       .lead b { color: var(--ink); }
 
@@ -184,7 +196,7 @@
       .job:first-of-type { border-top: none; padding-top: 2px; }
       .job-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
       .job h3 { font-size: 16.5px; font-weight: 700; }
-      .job .where { color: var(--accent-strong); font-weight: 700; font-size: 14.5px; }
+      .job .where { color: var(--accent2-strong); font-weight: 700; font-size: 14.5px; }
       .job .when {
         margin-left: auto; font-family: "JetBrains Mono", monospace; font-size: 12px;
         color: var(--ink-faint); white-space: nowrap;
@@ -224,6 +236,7 @@
         content: ""; position: absolute; left: 0; top: 7px; width: 12px; height: 12px;
         border-radius: 50%; background: var(--surface); border: 3px solid var(--accent);
       }
+      .timeline li:nth-child(even)::before { border-color: var(--accent2); }
       .timeline .when {
         font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--accent-strong);
         font-weight: 600;
@@ -262,10 +275,11 @@
       @media print {
         :root {
           --bg: #ffffff; --surface: #ffffff; --surface-2: #ffffff;
-          --ink: #15242f; --ink-soft: #333; --ink-faint: #666;
-          --line: #ccc; --line-strong: #aaa; --tag-bg: #eee;
-          --accent: #0b6e63; --accent-strong: #084f47; --accent-soft: #e2efed;
-          --ok-bg: #e6f2ec; --ok-ink: #0c5b3f; --shadow: none;
+          --ink: #2e2a20; --ink-soft: #3a352a; --ink-faint: #6b6353;
+          --line: #d8cdb2; --line-strong: #b3a582; --tag-bg: #f1ebda;
+          --accent: #5b7350; --accent-strong: #3e5234; --accent-soft: #e4ead9;
+          --accent2: #b26b45; --accent2-strong: #8a4e2c; --accent2-soft: #f4e3d2;
+          --ok-bg: #e4ead9; --ok-ink: #3e5234; --shadow: none;
         }
         body { font-size: 12.5px; background: #fff; }
         .nav, .copy-btn, .side .cta, .side .cta2 { display: none !important; }
@@ -279,7 +293,7 @@
         .reveal { opacity: 1; transform: none; }
         .job, .proj, .timeline li { break-inside: avoid; }
         footer { margin-top: 12px; }
-        a { color: #15242f; text-decoration: none; }
+        a { color: #2e2a20; text-decoration: none; }
       }
     </style>
   </head>
@@ -379,14 +393,14 @@
 
           <h2>Centres d'intérêt</h2>
           <div class="hobbies">
-            <span class="hobby" style="--c:#2a7d9c"><i></i>Voyage</span>
-            <span class="hobby" style="--c:#a05c2c"><i></i>Lecture</span>
-            <span class="hobby" style="--c:#b03a2e"><i></i>Musculation</span>
-            <span class="hobby" style="--c:#5d6fa8"><i></i>Réflexion</span>
-            <span class="hobby" style="--c:#b8860b"><i></i>Brainstorming</span>
-            <span class="hobby" style="--c:#6d5ba8"><i></i>Théories du complot</span>
-            <span class="hobby" style="--c:#0b6e63"><i></i>Nouvelles technologies</span>
-            <span class="hobby" style="--c:#7a5c1e"><i></i>Voiture</span>
+            <span class="hobby" style="--c:#5f7a68"><i></i>Voyage</span>
+            <span class="hobby" style="--c:#a67a4a"><i></i>Lecture</span>
+            <span class="hobby" style="--c:#b26b45"><i></i>Musculation</span>
+            <span class="hobby" style="--c:#7a7a52"><i></i>Réflexion</span>
+            <span class="hobby" style="--c:#b08d3e"><i></i>Brainstorming</span>
+            <span class="hobby" style="--c:#6b5d4f"><i></i>Théories du complot</span>
+            <span class="hobby" style="--c:#5b7350"><i></i>Nouvelles technologies</span>
+            <span class="hobby" style="--c:#8c6a3f"><i></i>Voiture</span>
           </div>
 
           <a class="cta" href="mailto:boulinguirandy76@gmail.com">Me contacter par e-mail</a>
